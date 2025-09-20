@@ -1,0 +1,7 @@
+{
+  "name": "StartOne",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
