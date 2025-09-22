@@ -1,31 +1,173 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" auto-hide="true" type="overlay" side="start" menuId="first" swipeGesture="true">
       <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi&#64;ionicframework.com</ion-note>
+        <div>
+          <ion-img class="ion-padding-top" src="../assets/images/profile.png" alt="Profile Picture"></ion-img>
+          <ion-card-header class="ion-text-center ion-text-uppercase">
+            <ion-card-subtitle color="warning">T e c h n i c a l &nbsp; &nbsp; L e a d</ion-card-subtitle>
+            <ion-card-title color="primary">Sagar Panchal</ion-card-title>
+          </ion-card-header>
+        </div>
 
-          @for (p of appPages; track p; let i = $index) {
-            <ion-menu-toggle auto-hide="false">
-              <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-                <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-                <ion-label>{{ p.title }}</ion-label>
+        <ion-accordion-group mode="md" [multiple]="true" [value]="['contact' ,'skills']" expand="inset" animated="true">
+          <ion-accordion value="contact">
+             <ion-item slot="header">
+                <ion-label>CONTACT</ion-label>
               </ion-item>
-            </ion-menu-toggle>
-          }
-        </ion-list>
+            <ion-list lines="none" slot="content">
+              <!-- <ion-item slot="header">
+                <ion-label>CONTACT</ion-label>
+              </ion-item> -->
+              <ion-item href="mailto:panchalsagar21@gmail.com">
+                <ion-icon name="mail-outline" slot="start" color="primary"></ion-icon>
+                <ion-label for="email">panchalsagar21@gmail.com</ion-label>
+              </ion-item>
+              <ion-item href="tel:+918866245921">
+                <ion-icon aria-hidden="true" name="call-outline" slot="start" color="primary"></ion-icon>
+                <ion-label>+91 8866245921</ion-label>
+              </ion-item>
+              <ion-item href="https://www.google.com/maps/place/Gujarat" target="_blank">
+                <ion-icon aria-hidden="true" name="location-outline" slot="start" color="primary"></ion-icon>
+                <ion-label>India, Gujarat</ion-label>
+              </ion-item>
+              <ion-item class="ion-text-justify">
+                <ion-button class="ion-padding-start" shape="round" fill="clear"
+                  href="https://linkedin.com/in/spanchal11" target="_blank">
+                  <ion-icon slot="icon-only" name="logo-linkedin" size="large" color="primary"></ion-icon>
+                </ion-button>
+                <ion-button shape="round" fill="clear" href="https://github.com/git-spanchal11" target="_blank">
+                  <ion-icon slot="icon-only" name="logo-github" size="large" color="dark"></ion-icon>
+                </ion-button>
+                <ion-button shape="round" fill="clear" href="https://stackoverflow.com/users/6796942/spanchal"
+                  target="_blank">
+                  <ion-icon slot="icon-only" name="logo-stackoverflow" size="large" color="warning"></ion-icon>
+                </ion-button>
+                <ion-button shape="round" fill="clear" href="https://forum.ionicframework.com/u/spanchal"
+                  target="_blank">
+                  <ion-icon slot="icon-only" name="logo-ionic" size="large" color="primary"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-accordion>
 
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
 
-          @for (label of labels; track label) {
-            <ion-item lines="none">
-              <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-              <ion-label>{{ label }}</ion-label>
+          <ion-accordion value="skills">
+            <ion-item slot="header">
+              <ion-label>SKILL SET</ion-label>
             </ion-item>
-          }
-        </ion-list>
+            <ion-list lines="none" slot="content">
+              <!-- <ion-item slot="header">
+                <ion-label>SKILL SET</ion-label>
+              </ion-item> -->
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Adaptability</ion-label>
+                <ion-progress-bar value="0.8"></ion-progress-bar>
+              </ion-item>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Analytical</ion-label>
+                <ion-progress-bar value="0.7"></ion-progress-bar>
+              </ion-item>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Leadership</ion-label>
+                <ion-progress-bar value="0.7"></ion-progress-bar>
+              </ion-item>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Problem Solving</ion-label>
+                <ion-progress-bar value="0.9"></ion-progress-bar>
+              </ion-item>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Decision Making</ion-label>
+                <ion-progress-bar value="0.7"></ion-progress-bar>
+              </ion-item>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Time Management</ion-label>
+                <ion-progress-bar value="0.9"></ion-progress-bar>
+              </ion-item>
+
+              <p class="ion-padding ion-text-center">
+                <ion-chip color="primary" [outline]="true">Angular</ion-chip>
+                <ion-chip color="primary" [outline]="true">TypeScript</ion-chip>
+                <ion-chip color="primary" [outline]="true">ES6</ion-chip>
+                <ion-chip color="primary" [outline]="true">JavaScript</ion-chip>
+                <ion-chip color="primary" [outline]="true">HTML</ion-chip>
+                <ion-chip color="primary" [outline]="true">CSS</ion-chip>
+                <ion-chip color="primary" [outline]="true">SCSS</ion-chip>
+                <ion-chip color="primary" [outline]="true">AngularJS</ion-chip>
+                <ion-chip color="primary" [outline]="true">Ionic</ion-chip>
+                <ion-chip color="primary" [outline]="true">Cordova</ion-chip>
+                <ion-chip color="primary" [outline]="true">Capacitor</ion-chip>
+                <ion-chip color="primary" [outline]="true">Git</ion-chip>
+                <ion-chip color="primary" [outline]="true">Jira</ion-chip>
+                <ion-chip color="primary" [outline]="true">Firebase</ion-chip>
+                <ion-chip color="primary" [outline]="true">Sentry</ion-chip>
+                <ion-chip color="primary" [outline]="true">Amplitude</ion-chip>
+                <ion-chip color="primary" [outline]="true">Optimizely</ion-chip>
+                <ion-chip color="primary" [outline]="true">Quantum Metric</ion-chip>
+                <ion-chip color="primary" [outline]="true">Agile</ion-chip>
+                <ion-chip color="primary" [outline]="true">Electron</ion-chip>
+                <ion-chip color="primary" [outline]="true">iOS</ion-chip>
+                <ion-chip color="primary" [outline]="true">Android</ion-chip>
+
+              </p>
+
+
+            </ion-list>
+          </ion-accordion>
+        </ion-accordion-group>
+
+        <!-- <ion-list lines="none">
+              <ion-list-header>
+                <ion-label>CONTACT</ion-label>
+              </ion-list-header>
+              <ion-item>
+                <ion-icon name="mail" slot="start"></ion-icon>
+                <ion-label>panchalsagar21@gmail.com</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="call" slot="start"></ion-icon>
+                <ion-label>+91 8866245921</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="location" slot="start"></ion-icon>
+                <ion-label>India, Gujarat</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="logo-linkedin" slot="start"></ion-icon>
+                <ion-label>www.linkedin.com/in/spanchal11</ion-label>
+              </ion-item>
+            </ion-list> 
+         
+        <ion-list lines="none">
+              <ion-list-header>
+                <ion-label>SKILLS</ion-label>
+              </ion-list-header>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Adaptability</ion-label> 
+               <ion-progress-bar value="0.5"></ion-progress-bar>
+              </ion-item>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Analytical</ion-label> 
+               <ion-progress-bar value="0.5"></ion-progress-bar>
+              </ion-item>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Leadership</ion-label> 
+               <ion-progress-bar value="0.5"></ion-progress-bar>
+              </ion-item>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Problem Solving</ion-label> 
+               <ion-progress-bar value="0.5"></ion-progress-bar>
+              </ion-item>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Decision Making</ion-label> 
+               <ion-progress-bar value="0.5"></ion-progress-bar>
+              </ion-item>
+              <ion-item label-placement="stacked">
+                <ion-label position="stacked">Time Management</ion-label> 
+               <ion-progress-bar value="0.5"></ion-progress-bar>
+              </ion-item>
+            </ion-list> -->
+
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
