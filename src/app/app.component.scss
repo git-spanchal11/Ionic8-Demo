@@ -1,10 +1,11 @@
 ion-img::part(image) {
-    border-radius: 50%;
-    width: auto !important;
-    height: 160px !important;
-    margin: 0 auto;
-    border: solid 4px var(--ion-color-primary);
+  border-radius: 50%;
+  width: auto !important;
+  height: 160px !important;
+  margin: 0 auto;
+  border: solid 6px var(--ion-color-light);
 }
+
 
 
 

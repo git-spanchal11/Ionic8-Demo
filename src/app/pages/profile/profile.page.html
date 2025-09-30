@@ -1,26 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>SAGAR PANCHAL</ion-title>
+    <!-- <ion-title>SAGAR PANCHAL</ion-title> -->
     <ion-buttons slot="end">
       <ion-menu-button>
-          <!-- <ion-fab-button fill="outline" color="peimary" size="small">
-            <ion-icon name="menu"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-list></ion-fab-list> -->
       </ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 
 </ion-header>
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">SAGAR PANCHAL</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="content-body" > <!-- [fullscreen]="true" -->
 
+  <!-- <ion-fab slot="fixed" vertical="top" horizontal="end">
+    <ion-menu-button>
+        <ion-fab-button>
+        <ion-icon name="menu"></ion-icon>
+      </ion-fab-button>
+      </ion-menu-button>
+    </ion-fab> -->
 
-<ion-list>
+  <!-- <ion-toolbar>   -->
+    <ion-segment [scrollable]="true" mode="md" value="a">
+      <ion-segment-button value="a" content-id="a">
+        <ion-label>Default</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="b" content-id="b">
+        <ion-label>Segment</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="c" content-id="c">
+        <ion-label>Default</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="d" content-id="d">
+        <ion-label>Segment</ion-label>
+      </ion-segment-button>
+      <!-- <ion-segment-button value="e">
+        <ion-label>Default</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="f">
+        <ion-label>Segment</ion-label>
+      </ion-segment-button> -->
+  </ion-segment>
+<!-- </ion-toolbar> -->
+
+<ion-segment-view>
+    <ion-segment-content id="a">
+      <ion-list>
   <ion-list-header>
     <ion-label color="primary">WORK HISTORY</ion-label>
   </ion-list-header>
@@ -50,8 +73,19 @@
 
   
 </ion-list>
+    </ion-segment-content>
+  <ion-segment-content id="b">Second</ion-segment-content>
+  <ion-segment-content id="c">Third</ion-segment-content>
+  <ion-segment-content id="d">First</ion-segment-content>
+  <!-- <ion-segment-content id="e">Second</ion-segment-content>
+  <ion-segment-content id="f">Third</ion-segment-content> -->
+</ion-segment-view>
+  
 
-<ion-list>
+
+
+
+<!-- <ion-list>
   <ion-list-header>
     <ion-label color="primary">KEY PROJECTS</ion-label>
   </ion-list-header>
@@ -81,6 +115,18 @@
   </ion-grid>
 
   
-</ion-list>
+</ion-list> -->
+
+
+<!-- <div class="circular-progress-container">
+  <div class="circular-progress-bar">
+    <svg class="circular-progress-svg" viewBox="0 0 100 100">
+      <circle class="circular-progress-bg" cx="50" cy="50" r="45"></circle>
+      <circle class="circular-progress-fill" cx="50" cy="50" r="45"></circle>
+    </svg>
+    <ion-progress-bar value="0.75"></ion-progress-bar>
+    <div class="progress-text">75%</div>
+  </div>
+</div> -->
   
 </ion-content>

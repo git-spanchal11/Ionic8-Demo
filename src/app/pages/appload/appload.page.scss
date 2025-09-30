@@ -1,0 +1,29 @@
+
+.body{
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  display: flex;
+
+}
+
+ion-img::part(image) {
+  border-radius: 50%;
+  width: auto !important;
+  height: 160px !important;
+  margin: 0 auto;
+  border: solid 6px var(--ion-color-light);
+}
+
+ion-card {
+  backdrop-filter: blur(10px);
+  background-color: rgb(80, 5, 38);
+  // padding: 90px 20px 20px;
+  // text-align: center;
+  border-radius: 30px;
+  border: var(--ion-color-light) 0.5px solid;
+  max-width: 350px;
+  overflow: visible;
+  animation: fadeIn 2s ease-out;
+  position: relative;
+}

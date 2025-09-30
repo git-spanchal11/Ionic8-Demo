@@ -1,13 +1,47 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>appload</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="body">
+      <ion-card>
+        <ion-card-header class="ion-padding-top">
+          <ion-img class="ion-padding-top" src="../assets/images/profile.png" alt="Profile"></ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <div color="light" class="ion-text-center">
+            <ion-card-title color="light">Sagar Panchal</ion-card-title>
+            <ion-card-subtitle class="ion-padding-top" color="light"><ion-icon name="location-outline"></ion-icon> Gujarat, IN</ion-card-subtitle>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">appload</ion-title>
-    </ion-toolbar>
-  </ion-header>
+            <p class="ion-padding" color="medium">
+              Web and mobile app developer, leveraging over 9 years of expertise to build innovative digital solutions
+              that drive business growth.
+            </p>
+
+            <ion-row>
+              <ion-col>
+              <ion-button shape="round" fill="clear" href="https://linkedin.com/in/spanchal11" target="_blank">
+                <ion-icon slot="icon-only" name="logo-linkedin" size="large" color="light"></ion-icon>
+              </ion-button>
+              </ion-col>
+              <ion-col>
+              <ion-button shape="round" fill="clear" href="https://github.com/git-spanchal11" target="_blank">
+                <ion-icon slot="icon-only" name="logo-github" size="large" color="light"></ion-icon>
+              </ion-button>
+              </ion-col>
+              <ion-col>
+              <ion-button shape="round" fill="clear" href="https://stackoverflow.com/users/6796942/spanchal"
+                target="_blank">
+                <ion-icon slot="icon-only" name="logo-stackoverflow" size="large" color="light"></ion-icon>
+              </ion-button>
+              </ion-col>
+              <ion-col>
+              <ion-button shape="round" fill="clear" href="https://forum.ionicframework.com/u/spanchal" target="_blank">
+                <ion-icon slot="icon-only" name="logo-ionic" size="large" color="light"></ion-icon>
+              </ion-button>
+              </ion-col>
+          </ion-row>
+          <ion-button color="light" fill="outline" shape="round" (click)="navigate()">
+              Hey! Welcome <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+  </div>
 </ion-content>
