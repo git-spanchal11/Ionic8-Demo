@@ -6,6 +6,18 @@ ion-img::part(image) {
   border: solid 6px var(--ion-color-light);
 }
 
+ion-accordion, ion-grid, ion-row, ion-col, ion-list-header, ion-list, ion-card , ion-card-header, ion-card-subtitle, ion-card-title {
+    background-color: transparent;// rgb(80, 5, 38);
+    color: var(--ion-color-light);
+}
+
+
+ion-item {
+  --ion-item-background: transparent;
+  --ion-item-color: var(--ion-color-light);
+  font-size: 12px;
+}
+
 
 
 

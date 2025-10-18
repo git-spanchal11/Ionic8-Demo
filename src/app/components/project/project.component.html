@@ -1,0 +1,73 @@
+<ion-list *ngIf="projects | async as projects; else loading">
+  <ion-list-header>
+    <ion-label color="primary">KEY PROJECTS</ion-label>
+  </ion-list-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let project of projects" class="ion-no-padding" size-xs="12" size-sm="12" size-md="12" size-lg="6"
+        size-xl="6">
+
+        <ion-card card-mode="outline" color="light">
+          <ion-card-header>
+            <ion-card-title class="ion-text-wrap">{{ project.name }}</ion-card-title>
+            <ion-card-subtitle class="ion-text-wrap">
+              Client: <strong>{{ project.client }}</strong> | {{ project.duration }}
+            </ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p class="ion-text-wrap ion-padding-bottom">
+              **Domain:** {{ project.domain }}
+            </p>
+
+            <p class="ion-text-wrap project-description">
+              {{ project.desc }}
+            </p>
+
+            <ion-grid class="ion-padding-top">
+
+              <ion-row class="ion-align-items-center">
+                <ion-col size="auto" class="label-col">
+                  <ion-icon name="devices-outline"></ion-icon> **Platform:**
+                </ion-col>
+                <ion-col>
+                  <ion-chip *ngFor="let platform of project.platform" color="secondary" size="small">
+                    <ion-icon [name]="getPlatformIcon(platform)"></ion-icon>
+                    <ion-label>{{ platform }}</ion-label>
+                  </ion-chip>
+                </ion-col>
+              </ion-row>
+
+              <ion-row class="ion-align-items-start ion-padding-top">
+                <ion-col size="auto" class="label-col">
+                  <ion-icon name="code-slash-outline"></ion-icon> **Tech Stack:**
+                </ion-col>
+                <ion-col>
+                  <ion-chip *ngFor="let tech of project.techanology" color="primary" size="small">
+                    <ion-label>{{ tech }}</ion-label>
+                  </ion-chip>
+                </ion-col>
+              </ion-row>
+
+            </ion-grid>
+
+            <ion-button *ngIf="project.link" [href]="project.link" target="_blank" expand="block" fill="clear">
+              View Project Details
+              <ion-icon slot="end" name="open-outline"></ion-icon>
+            </ion-button>
+
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-list>
+
+<ng-template #loading>
+  <div class="ion-text-center ion-padding">
+    <ion-spinner name="dots"></ion-spinner>
+    <p>Fetching projects...</p>
+  </div>
+</ng-template>

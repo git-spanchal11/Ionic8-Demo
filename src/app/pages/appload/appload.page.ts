@@ -29,4 +29,10 @@ export class ApploadPage implements OnInit {
     this.router.navigate(['/profile']);
   }
 
+  ionViewWillLeave() {
+    // Re-enable the menu when leaving the login page
+    this.menuController.enable(true, 'mainMenu'); 
+    this.menuController.swipeGesture(true);
+  }
+
 }

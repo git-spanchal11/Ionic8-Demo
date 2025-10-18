@@ -3,12 +3,14 @@
     {
       "name": "AtoZ Infoway LLP",
       "duration": "2015 - 2022",
-      "role": "Senior Software Engineer"
+      "role": "Senior Software Engineer",
+      "logoImage": "{{images.atozinfoway}}"
     },
     {
       "name": "HCL Technologies",
       "duration": "2022 - present",
-      "role": "Technical LEad"
+      "role": "Technical LEad",
+      "logoImage": "{{images.hcl}}"
     }
   ],
   "projects": [
@@ -86,6 +88,55 @@
       "images": []
     },
     {
+      "name": "Transcom",
+      "client": "Infosenseglobal",
+      "duration": "2019-2021",
+      "domain": "transportation tracking",
+      "techanology": [
+        "Angular",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "Git",
+        "NodeJS",
+        "LeafletJS",
+        "GPS Tracking"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "Web"
+      ],
+      "desc": "Advance Operations Dashboard is an application where a user can see trip data analysis and current conditions of roadways caused by construction events. It contains real-time, as well as, historical travel time information for trips. Users can view trips, cameras, and events on a map etc. It also includes features like viewing travel time for selected trips.",
+      "link": "",
+      "images": []
+    },
+    {
+      "name": "Danabazaar",
+      "client": "AtoZ Infoway LLP",
+      "duration": "2019 – 2021",
+      "domain": "Ecommerce / Grocery market",
+      "techanology": [
+        "Angular",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "Git",
+        "Ionic",
+        "SQLite",
+        "Onesignal",
+        "Sentry",
+        "firebase"
+      ],
+      "platform": [
+        "iOS",
+        "Android"
+      ],
+      "desc": "online supermarket shopping app, It offers a convenient and reliable grocery shopping experience from the comfort of home.",
+      "link": "",
+      "images": []
+    },
+    {
       "name": "Customer 360",
       "client": "Infosenseglobal",
       "duration": "2019 – 2022",
@@ -107,6 +158,31 @@
         "Web"
       ],
       "desc": "An ERP solution for small and medium-sized enterprises to manage their business processes.",
+      "link": "",
+      "images": []
+    },
+    {
+      "name": "HRMS - HR Sense",
+      "client": "AtoZ Infoway LLP",
+      "duration": "2017 – 2019",
+      "domain": "Human Resource Management System",
+      "techanology": [
+        "Angular",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "Git",
+        "Ionic",
+        "Oracle",
+        "Java",
+        "SQLite",
+        "GEO Location"
+      ],
+      "platform": [
+        "iOS",
+        "Android"
+      ],
+      "desc": "HR application as a product for AtoZ INFOWAY LLP to manage internal HR workflows. Integrated payroll, leave, attendance and role management modules for real-time HR processing.",
       "link": "",
       "images": []
     },

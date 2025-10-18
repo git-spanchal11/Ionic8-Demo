@@ -1,50 +1,71 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" auto-hide="true" type="overlay" side="start" menuId="mainMenu"
-      swipeGesture="true">
+    <ion-menu contentId="main-content" auto-hide="true" type="push" side="start" menuId="mainMenu"
+      swipeGesture="false">
       <ion-content>
         <div class="body">
-          
 
-          <ion-accordion-group mode="md" [multiple]="true" [value]="['contact' ,'skills']" expand="inset" >
-          <ion-accordion value="contact">
-             <ion-item slot="header">
-                <ion-label>CONTACT</ion-label>
-              </ion-item>
-            <ion-list lines="none" slot="content">
-              <ion-item href="mailto:panchalsagar21@gmail.com">
-                <ion-icon name="mail-outline" slot="start" color="primary"></ion-icon>
-                <ion-label for="email">panchalsagar21@gmail.com</ion-label>
-              </ion-item>
-              <ion-item href="tel:+918866245921">
-                <ion-icon aria-hidden="true" name="call-outline" slot="start" color="primary"></ion-icon>
-                <ion-label>+91 8866245921</ion-label>
-              </ion-item>
-              <ion-item href="https://www.google.com/maps/place/Gujarat" target="_blank">
-                <ion-icon aria-hidden="true" name="location-outline" slot="start" color="primary"></ion-icon>
-                <ion-label>India, Gujarat</ion-label>
-              </ion-item>
-              <ion-item class="ion-text-justify">
-                <ion-button class="ion-padding-start" shape="round" fill="clear"
-                  href="https://linkedin.com/in/spanchal11" target="_blank">
-                  <ion-icon slot="icon-only" name="logo-linkedin" size="large" color="primary"></ion-icon>
-                </ion-button>
-                <ion-button shape="round" fill="clear" href="https://github.com/git-spanchal11" target="_blank">
-                  <ion-icon slot="icon-only" name="logo-github" size="large" color="dark"></ion-icon>
-                </ion-button>
-                <ion-button shape="round" fill="clear" href="https://stackoverflow.com/users/6796942/spanchal"
-                  target="_blank">
-                  <ion-icon slot="icon-only" name="logo-stackoverflow" size="large" color="warning"></ion-icon>
-                </ion-button>
-                <ion-button shape="round" fill="clear" href="https://forum.ionicframework.com/u/spanchal"
-                  target="_blank">
-                  <ion-icon slot="icon-only" name="logo-ionic" size="large" color="primary"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-list>
-          </ion-accordion>
+          <ion-card>
+            <ion-card-header class="ion-padding-top">
+              <ion-img src="../assets/images/profile.png" alt="Profile"></ion-img>
+            </ion-card-header>
+            <ion-card-content>
+              <div color="light" class="ion-text-center">
+                <ion-card-title color="light">Sagar Panchal</ion-card-title>
+                <ion-card-subtitle class="ion-padding-top" color="light"> Technical Lead </ion-card-subtitle>
+
+                <ion-list lines="none" slot="content">
+                  <ion-item href="mailto:panchalsagar21@gmail.com">
+                    <ion-icon name="mail-outline" slot="start"></ion-icon>
+                    <ion-label for="email">panchalsagar21@gmail.com</ion-label>
+                  </ion-item>
+                  <ion-item href="tel:+918866245921">
+                    <ion-icon aria-hidden="true" name="call-outline" slot="start"></ion-icon>
+                    <ion-label>+91 8866245921</ion-label>
+                  </ion-item>
+                  <ion-item href="https://www.google.com/maps/place/Gujarat" target="_blank">
+                    <ion-icon aria-hidden="true" name="location-outline" slot="start"></ion-icon>
+                    <ion-label>India, Gujarat</ion-label>
+                  </ion-item>
+
+                  <ion-item-group class="ion-text-center ion-padding-top">
+                    <ion-chip *ngFor="let tech of techanologies | async" [color]="tech.category_color" [outline]="true">
+                      <ion-icon [name]="tech.icon"></ion-icon>
+                      <ion-label>{{tech.skill}}</ion-label>
+                    </ion-chip>
+                  </ion-item-group>
+                </ion-list>
+              </div>
+            </ion-card-content>
+
+            <ion-toolbar>
+              <ion-row class="ion-text-center no-padding no-margin">
+                <ion-col class="no-padding no-margin">
+                  <ion-button fill="clear" href="https://linkedin.com/in/spanchal11" target="_blank">
+                    <ion-icon slot="icon-only" name="logo-linkedin" color="light"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button fill="clear" href="https://github.com/git-spanchal11" target="_blank">
+                    <ion-icon slot="icon-only" name="logo-github" color="light"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button fill="clear" href="https://stackoverflow.com/users/6796942/spanchal" target="_blank">
+                    <ion-icon slot="icon-only" name="logo-stackoverflow" color="light"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button fill="clear" href="https://forum.ionicframework.com/u/spanchal" target="_blank">
+                    <ion-icon slot="icon-only" name="logo-ionic" color="light"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+          </ion-toolbar>
+        </ion-card>
 
 
+          <!-- 
           <ion-accordion value="skills">
             <ion-item slot="header">
               <ion-label>SKILL SET</ion-label>
@@ -75,36 +96,14 @@
                 <ion-progress-bar value="0.9"></ion-progress-bar>
               </ion-item>
 
-              <p class="ion-padding ion-text-center">
-                <ion-chip color="primary" [outline]="true">Angular</ion-chip>
-                <ion-chip color="primary" [outline]="true">TypeScript</ion-chip>
-                <ion-chip color="primary" [outline]="true">ES6</ion-chip>
-                <ion-chip color="primary" [outline]="true">JavaScript</ion-chip>
-                <ion-chip color="primary" [outline]="true">HTML</ion-chip>
-                <ion-chip color="primary" [outline]="true">CSS</ion-chip>
-                <ion-chip color="primary" [outline]="true">SCSS</ion-chip>
-                <ion-chip color="primary" [outline]="true">AngularJS</ion-chip>
-                <ion-chip color="primary" [outline]="true">Ionic</ion-chip>
-                <ion-chip color="primary" [outline]="true">Cordova</ion-chip>
-                <ion-chip color="primary" [outline]="true">Capacitor</ion-chip>
-                <ion-chip color="primary" [outline]="true">Git</ion-chip>
-                <ion-chip color="primary" [outline]="true">Jira</ion-chip>
-                <ion-chip color="primary" [outline]="true">Firebase</ion-chip>
-                <ion-chip color="primary" [outline]="true">Sentry</ion-chip>
-                <ion-chip color="primary" [outline]="true">Amplitude</ion-chip>
-                <ion-chip color="primary" [outline]="true">Optimizely</ion-chip>
-                <ion-chip color="primary" [outline]="true">Quantum Metric</ion-chip>
-                <ion-chip color="primary" [outline]="true">Agile</ion-chip>
-                <ion-chip color="primary" [outline]="true">Electron</ion-chip>
-                <ion-chip color="primary" [outline]="true">iOS</ion-chip>
-                <ion-chip color="primary" [outline]="true">Android</ion-chip>
-
-              </p>
+              
 
 
             </ion-list>
           </ion-accordion>
-        </ion-accordion-group>
+         -->
+
+         
         </div>
       </ion-content>
     </ion-menu>
