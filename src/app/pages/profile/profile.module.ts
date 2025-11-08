@@ -9,6 +9,8 @@ import { ProfilePageRoutingModule } from './profile-routing.module';
 import { ProfilePage } from './profile.page';
 import { ProjectComponent } from 'src/app/components/project/project.component';
 import { CompanyComponent } from 'src/app/components/company/company.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 @NgModule({
   imports: [
@@ -18,6 +20,8 @@ import { CompanyComponent } from 'src/app/components/company/company.component';
     ProfilePageRoutingModule
   ],
   declarations: [ProfilePage, ProjectComponent, CompanyComponent],
-  exports: [ProjectComponent, CompanyComponent]
+  exports: [ProjectComponent, CompanyComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+
 })
 export class ProfilePageModule {}

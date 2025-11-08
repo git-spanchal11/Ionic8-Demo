@@ -1,69 +1,82 @@
-<ion-list *ngIf="projects | async as projects; else loading">
-  <ion-list-header>
-    <ion-label color="primary">KEY PROJECTS</ion-label>
-  </ion-list-header>
 
-  <ion-grid>
+  <!-- <ion-grid *ngIf="projects | async as projects; else loading">
     <ion-row>
-      <ion-col *ngFor="let project of projects" class="ion-no-padding" size-xs="12" size-sm="12" size-md="12" size-lg="6"
-        size-xl="6">
-
-        <ion-card card-mode="outline" color="light">
+      <ion-col *ngFor="let project of projects" size="12">
+        <ion-card  mode="ios">
           <ion-card-header>
-            <ion-card-title class="ion-text-wrap">{{ project.name }}</ion-card-title>
-            <ion-card-subtitle class="ion-text-wrap">
-              Client: <strong>{{ project.client }}</strong> | {{ project.duration }}
-            </ion-card-subtitle>
+            <ion-card-title>{{ project.name }}</ion-card-title>
+            <ion-card-subtitle>{{ project.domain }}</ion-card-subtitle>
           </ion-card-header>
 
           <ion-card-content>
-            <p class="ion-text-wrap ion-padding-bottom">
-              **Domain:** {{ project.domain }}
-            </p>
+            <p class="muted"><b>Client:</b> {{ project.client }}</p>
+            <p class="muted"><b>Duration:</b> {{ project.duration }}</p>
+            <p class="muted"><b>Description:</b> {{ project.desc }}</p>
 
-            <p class="ion-text-wrap project-description">
-              {{ project.desc }}
-            </p>
+            <ion-badge  color="tertiary" size="small" outline>
+              
+            </ion-badge>
 
-            <ion-grid class="ion-padding-top">
-
-              <ion-row class="ion-align-items-center">
-                <ion-col size="auto" class="label-col">
-                  <ion-icon name="devices-outline"></ion-icon> **Platform:**
-                </ion-col>
-                <ion-col>
-                  <ion-chip *ngFor="let platform of project.platform" color="secondary" size="small">
-                    <ion-icon [name]="getPlatformIcon(platform)"></ion-icon>
-                    <ion-label>{{ platform }}</ion-label>
-                  </ion-chip>
-                </ion-col>
-              </ion-row>
-
-              <ion-row class="ion-align-items-start ion-padding-top">
-                <ion-col size="auto" class="label-col">
-                  <ion-icon name="code-slash-outline"></ion-icon> **Tech Stack:**
-                </ion-col>
-                <ion-col>
-                  <ion-chip *ngFor="let tech of project.techanology" color="primary" size="small">
-                    <ion-label>{{ tech }}</ion-label>
-                  </ion-chip>
-                </ion-col>
-              </ion-row>
-
-            </ion-grid>
-
-            <ion-button *ngIf="project.link" [href]="project.link" target="_blank" expand="block" fill="clear">
-              View Project Details
-              <ion-icon slot="end" name="open-outline"></ion-icon>
-            </ion-button>
-
+             <span *ngFor="let platform of project.platform">
+               &nbsp;<ion-badge  color="tertiary"> <ion-icon [name]="getPlatformIcon(platform)"></ion-icon> {{ platform }} </ion-badge> 
+            </span> <br/>
+            <span *ngFor="let tech of project.techanology">
+              &nbsp;<ion-badge  color="tertiary"> {{ tech }}</ion-badge> 
+            </span>
+            
           </ion-card-content>
         </ion-card>
-
       </ion-col>
     </ion-row>
-  </ion-grid>
-</ion-list>
+  </ion-grid> -->
+
+<div *ngIf="projects | async as projects; else loading">
+
+  <swiper-container
+    #slides
+    pagination="true"
+    navigation="true"
+    [slidesPerView]="1"
+    [spaceBetween]="10"
+    [centeredSlides]="true"
+    animation="slide"
+    autoplay="{
+      delay: 2000,
+      disableOnInteraction: false
+    }"
+    [loop]="true"
+      (slideChange)="onSlideChanged()">
+      <swiper-slide *ngFor="let project of projects">
+        <ion-card  mode="ios">
+          <ion-card-header>
+            <ion-card-title>{{ project.name }}</ion-card-title>
+            <ion-card-subtitle>{{ project.domain }}</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p class="muted"><b>Client:</b> {{ project.client }}</p>
+            <p class="muted"><b>Duration:</b> {{ project.duration }}</p>
+            <p class="muted"><b>Description:</b> {{ project.desc }}</p>
+
+            <ion-badge  color="tertiary" size="small" outline>
+              
+            </ion-badge>
+
+             <span *ngFor="let platform of project.platform">
+               &nbsp;<ion-badge  color="tertiary"> <ion-icon [name]="getPlatformIcon(platform)"></ion-icon> {{ platform }} </ion-badge> 
+            </span> <br/>
+            <span *ngFor="let tech of project.techanology">
+              &nbsp;<ion-badge  color="tertiary"> {{ tech }}</ion-badge> 
+            </span>
+            
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+      <!-- <swiper-slide>Slide 2 Content</swiper-slide>
+      <swiper-slide>Slide 3 Content</swiper-slide> -->
+    </swiper-container>
+</div>
+
 
 <ng-template #loading>
   <div class="ion-text-center ion-padding">

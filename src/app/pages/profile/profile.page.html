@@ -1,110 +1,135 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>SAGAR PANCHAL</ion-title>
-  </ion-toolbar>
+  </ion-toolbar> -->
 
 </ion-header>
-<ion-content class="content-body"> <!-- [fullscreen]="true" -->
-<!-- 
-  <ion-fab slot="fixed" vertical="top" horizontal="end" >  
-    <ion-menu-button>
-        <ion-fab-button>
-        <ion-icon name="menu"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-list side="end" #fabList>
-        <div class="fab-backdrop" ></div>
-      </ion-fab-list>
-      </ion-menu-button>
-    </ion-fab> -->
+<ion-content fullscreen>
+  <ion-grid class="ion-padding wrap ion-margin">
+    <ion-row>
 
-  <!-- <ion-toolbar>   -->
-  <ion-segment color="light" [scrollable]="true" mode="md" value="a">
-    <ion-segment-button value="a" content-id="a">
-      <ion-label color="light">Companies</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="b" content-id="b">
-      <ion-label color="light">Projects</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="c" content-id="c">
-      <ion-label color="light">Default</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="d" content-id="d">
-      <ion-label color="light">Segment</ion-label>
-    </ion-segment-button>
-    <!-- <ion-segment-button value="e">
-        <ion-label>Default</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="f">
-        <ion-label>Segment</ion-label>
-      </ion-segment-button> -->
-  </ion-segment>
-  <!-- </ion-toolbar> -->
-
-  <ion-segment-view>
-    <ion-segment-content id="a">
-     
-      <app-company></app-company>
-    </ion-segment-content>
-    <ion-segment-content id="b">
-
-     <app-project></app-project>
-
-    </ion-segment-content>
-    <ion-segment-content id="c">Third</ion-segment-content>
-    <ion-segment-content id="d">First</ion-segment-content>
-    <!-- <ion-segment-content id="e">Second</ion-segment-content>
-  <ion-segment-content id="f">Third</ion-segment-content> -->
-  </ion-segment-view>
-
-
-
-
-
-  <!-- <ion-list>
-  <ion-list-header>
-    <ion-label color="primary">KEY PROJECTS</ion-label>
-  </ion-list-header>
-
-  <ion-grid>
-    <ion-row >
-      <ion-col class="ion-no-padding" size-sm="6" size-md="2.5" size-lg="2.5" size-xl="2.5">
-        <ion-card card-mode="outline" color="light">
-        <img alt="HCL tech" src="../../../assets/images/hcl.jpg" />
+      <!-- About -->
+      <ion-card id="about">
         <ion-card-header>
-          <ion-card-subtitle>Technical Lead</ion-card-subtitle>
-          <ion-card-subtitle>2022 - Present</ion-card-subtitle>
+          <ion-card-title>Professional Summary</ion-card-title>
         </ion-card-header>
+        <ion-card-content class="muted">
+          Experienced Software Engineer with 9+ years in Web and Hybrid Mobile App Development. Skilled in building
+          scalable solutions, front-end engineering, and managing full project lifecycles. Recognized for leadership,
+          analytical thinking, and delivering high-quality results in agile environments.
+        </ion-card-content>
       </ion-card>
+      <!-- Left Column -->
+      <ion-col size="12" size-sm="12" size-md="12" size-lg="3" size-xl="3">
+
+        <!-- Skills -->
+        <ion-card id="skills">
+          <ion-card-header>
+            <ion-card-title>Technical Skills</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <div>Angular / Ionic / Cordova / Capacitor<div class="skill-bar">
+                <div class="skill-fill" style="width:95%"></div>
+              </div>
+            </div>
+            <div>TypeScript / JavaScript<div class="skill-bar">
+                <div class="skill-fill" style="width:92%"></div>
+              </div>
+            </div>
+            <div>Node.js / Firebase<div class="skill-bar">
+                <div class="skill-fill" style="width:85%"></div>
+              </div>
+            </div>
+            <div>UX / UI Design<div class="skill-bar">
+                <div class="skill-fill" style="width:80%"></div>
+              </div>
+            </div>
+            <div>Agile / JIRA / Git<div class="skill-bar">
+                <div class="skill-fill" style="width:88%"></div>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Core Competencies -->
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Core Competencies</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="muted">
+            <ul>
+              <li>Leadership & Decision Making</li>
+              <li>Analytical & Critical Thinking</li>
+              <li>Adaptability & Time Management</li>
+              <li>Problem Solving & Quick Learning</li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Achievements -->
+        <ion-card id="education">
+          <ion-card-header><ion-card-title>Achievements</ion-card-title></ion-card-header>
+          <ion-card-content class="muted">
+            <p>🏆 Employee of the Year (AtoZ INFOWAY LLP, 2019)</p>
+            <p>🏅 Spot Award (InfosenseGlobal, 2020)</p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Education -->
+        <ion-card id="education">
+          <ion-card-header><ion-card-title>Education</ion-card-title></ion-card-header>
+          <ion-card-content class="muted">
+            <p><b>M.C.A</b> — Gujarat Technological University (2015)</p>
+            <p><b>B.C.A</b> — Veer Narmad South Gujarat University (2012)</p>
+          </ion-card-content>
+        </ion-card>
+
       </ion-col>
-      <ion-col class="ion-no-padding" size-sm="6" size-md="2.5" size-lg="2.5" size-xl="2.5">
-        <ion-card card-mode="outline" color="light">
-        <img alt="HCL tech" src="../../../assets/images/atozinfoway.jpg" />
-        <ion-card-header>
-          <ion-card-subtitle>Sr. Developer</ion-card-subtitle>
-          <ion-card-subtitle>2015 - 2022</ion-card-subtitle>
-        </ion-card-header>
-      </ion-card>
+
+      <!-- Right Column -->
+      <ion-col size="12" size-sm="12" size-md="12" size-lg="9" size-xl="9">
+
+
+        <!-- Experience -->
+        <ion-card id="experience">
+          <ion-card-header>
+            <ion-card-title>Experience</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+
+            <app-company></app-company>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Projects -->
+        <ion-card id="projects">
+          <ion-card-header><ion-card-title>Key Projects</ion-card-title></ion-card-header>
+          <ion-card-content>
+            <app-project></app-project>
+          </ion-card-content>
+        </ion-card>
+
+
+
+        <!-- Contact -->
+        <ion-card id="contact">
+          <ion-card-header><ion-card-title>Contact</ion-card-title></ion-card-header>
+          <ion-card-content>
+            <p class="muted">Open to opportunities in Mumbai or remote roles. Let's connect!</p>
+            <ion-chip color="primary"><ion-icon name="mail-outline"></ion-icon><ion-label><a
+                  href="mailto:panchalsagar21@gmail.com">panchalsagar21@gmail.com</a></ion-label></ion-chip>
+            <ion-chip color="tertiary"><ion-icon name="logo-linkedin"></ion-icon><ion-label><a
+                  href="https://www.linkedin.com/in/spanchal11" target="_blank">LinkedIn</a></ion-label></ion-chip>
+            <ion-chip color="medium"><ion-icon name="logo-github"></ion-icon><ion-label><a href="https://github.com/"
+                  target="_blank">GitHub</a></ion-label></ion-chip>
+          </ion-card-content>
+        </ion-card>
+
       </ion-col>
-      
     </ion-row>
   </ion-grid>
-
-  
-</ion-list> -->
-
-
-  <!-- <div class="circular-progress-container">
-  <div class="circular-progress-bar">
-    <svg class="circular-progress-svg" viewBox="0 0 100 100">
-      <circle class="circular-progress-bg" cx="50" cy="50" r="45"></circle>
-      <circle class="circular-progress-fill" cx="50" cy="50" r="45"></circle>
-    </svg>
-    <ion-progress-bar value="0.75"></ion-progress-bar>
-    <div class="progress-text">75%</div>
-  </div>
-</div> -->
 
 </ion-content>

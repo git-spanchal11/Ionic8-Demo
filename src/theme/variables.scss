@@ -92,11 +92,24 @@
 } 
 
 ion-card {
-    border: 0.5px solid #ffffff9e;
+    // border: 0.5px solid #ffffff9e;
     border-radius: 15px;
     // box-shadow: 0 4px 6px rgba(255, 255, 255, 0.296);
     margin: 10px;
     // padding: 10px;
     // width: 90%;
     animation: fadeIn 1s ease-in-out;
+}
+
+ion-col{
+  padding: 0px;
+  margin:0px;
+}
+ion-row{
+  padding: 0px;
+  margin:0px;
+}
+ion-grid{
+  padding: 0px;
+  margin:0px;
 }

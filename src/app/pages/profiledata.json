@@ -4,13 +4,15 @@
       "name": "AtoZ Infoway LLP",
       "duration": "2015 - 2022",
       "role": "Senior Software Engineer",
-      "logoImage": "{{images.atozinfoway}}"
+      "logoImage": "{{images.atozinfoway}}",
+      "desc" : "Worked as a Senior Software Engineer on various mobile and web applications using Ionic, Angular, TypeScript, HTML, CSS, NodeJS, Oracle, Java, SQLite, IoT etc. Developed applications for domains like E-commerce, ERP, HRMS, AgriTech, Visitor Management etc."
     },
     {
       "name": "HCL Technologies",
       "duration": "2022 - present",
       "role": "Technical LEad",
-      "logoImage": "{{images.hcl}}"
+      "logoImage": "{{images.hcl}}",
+      "desc" : "Led cross-functional teams across time zones to deliver high-quality hybrid and web applications, ensuring optimal performance and maintainability. Played a key role in technical architecture and design decisions for client projects, mentoring junior developers and improving onboarding efficiency by 50%. Collaborated with business stakeholders to translate requirements into scalable solutions, improving time-to-market through agile delivery and effective sprint planning."
     }
   ],
   "projects": [
