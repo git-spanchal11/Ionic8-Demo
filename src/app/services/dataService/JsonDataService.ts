@@ -26,8 +26,8 @@ export class JsonDataService {
         "iOS",
         "Android"
       ],
-      "desc": "A global leader in cross-border, cross-currency money movement and payments.",
-      "link": "",
+      "desc": "<ul><li>Led frontend development for the R3 digital remittance platform using Angular, focusing on scalable, modular architecture. </li> <li>Designed and enforced reusable component libraries, state management, and performance optimizations for enterprise-grade applications. </li> <li>Mentored developers, conducted code reviews, and collaborated with backend, QA, and product teams to deliver secure, compliant financial solutions.</li></ul>",
+      "link": "https://www.westernunion.com/us/en/mobile-app.html",
       "images": []
     },
     {
@@ -51,8 +51,8 @@ export class JsonDataService {
         "Web",
         "Desktop"
       ],
-      "desc": "A risk management application for financial institutions to monitor and manage risks.",
-      "link": "",
+      "desc": "<ul><li>Led frontend architecture and development for the RSA Risk Summary App using <b>Angular</b>, focusing on scalable, secure, and maintainable UI design.</li><li>Implemented reusable component frameworks, role-based access controls, and optimized state management for complex risk data visualization.</li><li>Defined coding standards, conducted code reviews, and mentored team members to ensure high-quality enterprise-grade delivery.</li><li>Collaborated closely with product, backend, and security teams to deliver compliant, performance-optimized risk management solutions.</li></ul>",
+      "link": "https://rsa.olympus.com/",
       "images": []
     },
     {
@@ -236,74 +236,74 @@ export class JsonDataService {
 
   private mockTechnologies: Techanologies[] = [
     {
-      "icon":"logo-angular",
+      "icon": "logo-angular",
       "skill": "Angular",
       "category_color": "danger"
     },
     {
-      "icon":"code-working",
+      "icon": "code-working",
       "skill": "TypeScript",
       "category_color": "warning"
     },
     {
-      "icon":"logo-javascript",
+      "icon": "logo-javascript",
       "skill": "ES6",
       "category_color": "success"
     },
     {
-      "icon":"logo-html5",
+      "icon": "logo-html5",
       "skill": "HTML",
       "category_color": "light"
     },
-     {
-      "icon":"logo-angular",
+    {
+      "icon": "logo-angular",
       "skill": "AngularJS",
       "category_color": "danger"
     },
     {
-      "icon":"logo-ionic",
+      "icon": "logo-ionic",
       "skill": "Ionic",
       "category_color": "primary"
     },
-    
+
     {
-      "icon":"logo-sass",
+      "icon": "logo-sass",
       "skill": "SCSS",
       "category_color": "warning"
     },
-   
+
     {
-      "icon":"logo-javascript",
+      "icon": "logo-javascript",
       "skill": "JavaScript",
       "category_color": "success"
     },
     {
-      "icon":"logo-css3",
+      "icon": "logo-css3",
       "skill": "CSS",
       "category_color": "danger"
     },
     {
-      "icon":"code-slash-outline",
+      "icon": "code-slash-outline",
       "skill": "Cordova",
       "category_color": "light"
     },
     {
-      "icon":"logo-capacitor",
+      "icon": "logo-capacitor",
       "skill": "Capacitor",
       "category_color": "warning"
     },
     {
-      "icon":"git-branch",
+      "icon": "git-branch",
       "skill": "Git",
       "category_color": "light"
     },
     {
-      "icon":"analytics",
+      "icon": "analytics",
       "skill": "Jira",
       "category_color": "primary"
     },
     {
-      "icon":"logo-firebase",
+      "icon": "logo-firebase",
       "skill": "Firebase",
       "category_color": "warning"
     },
@@ -333,12 +333,12 @@ export class JsonDataService {
     //   "category_color": "danger"
     // },
     {
-      "icon":"logo-apple",
+      "icon": "logo-apple",
       "skill": "iOS",
       "category_color": "light"
     },
     {
-      "icon":"logo-android",
+      "icon": "logo-android",
       "skill": "Android",
       "category_color": "success"
     }

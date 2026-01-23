@@ -10,7 +10,7 @@ import { JsonDataService } from 'src/app/services/dataService/JsonDataService';
   standalone: false,
 })
 export class ProjectComponent  implements OnInit {
-    projects!: Observable<Project[]>;
+    projects!: Observable<Project[]>
       // Mapping platform names to Ionic icons for better visual display
       platformIcons: { [key: string]: any } = {
         'iOS': 'logo-apple',
@@ -22,7 +22,7 @@ export class ProjectComponent  implements OnInit {
   constructor(private jsonDataService: JsonDataService) { }
 
   ngOnInit() {
-    this.projects = this.jsonDataService.getProjects();
+    this.projects = this.jsonDataService.getProjects() || [];
     this.onSlideChanged();
   }
 
